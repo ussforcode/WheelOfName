@@ -190,7 +190,7 @@ function drawWheel(){
         const end =
         start + sliceAngle;
 
-        // ช่องวงล้อ
+        
         ctx.beginPath();
 
         ctx.moveTo(centerX,centerY);
@@ -212,7 +212,7 @@ function drawWheel(){
         ctx.lineWidth = 4;
         ctx.stroke();
 
-        // ข้อความ
+        
         ctx.save();
 
         ctx.translate(centerX,centerY);
@@ -260,23 +260,23 @@ function spin(){
 
     if(names.length === 0) return;
 
-    // สุ่มตัวที่ชนะ
+    
     const winner =
     secureRandom(names.length);
 
     const sliceAngle =
     360 / names.length;
 
-    // มุมกลางของช่องที่ชนะ
+    
     const middleAngle =
     winner * sliceAngle + sliceAngle/2;
 
-    // ชดเชยเพราะ pointer อยู่ด้านบน
-    // และ canvas เริ่มจากด้านขวา
+    
+    
     const finalAngle =
     270 - middleAngle;
 
-    // หมุนหลายรอบ + ไปยังช่องจริง
+    
     currentRotation +=
     360 * 6 + finalAngle;
 
